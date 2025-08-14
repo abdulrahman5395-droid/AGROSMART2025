@@ -1,0 +1,270 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header (Hero Section) */
+.hero {
+    position: relative;
+    background-image: url('images/pexels-timmossholder-974314.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 600px; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    z-index: 1; /* Ensure content is above the overlay */
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #2ecc71; /* Green button color */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #27ae60; /* Darker green on hover */
+}
+
+/* Navigation Bar */
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2ecc71; /* Green color */
+    padding: 10px 20px;
+    color: white;
+}
+
+.topnav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.topnav a:hover {
+    color: #f4f4f4; /* Lighter color on hover */
+}
+
+.topnav-right {
+    display: flex;
+    align-items: center;
+}
+
+.topnav-right a {
+    margin-left: 15px;
+}
+
+/* Main Content (Categories Section) */
+.categories {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.category-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Wrap categories to the next line if needed */
+    gap: 15px; /* Space between categories */
+    margin-top: 20px;
+}
+
+.category {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #2ecc71; /* Green category button color */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.category:hover {
+    background-color: #27ae60; /* Darker green on hover */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    margin-top: 50px;
+}
+
+/* General Form Styles */
+.signup-form,
+.login-form,
+.admin-dashboard {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form h2,
+.login-form h2,
+.admin-dashboard h2 {
+    text-align: center;
+    color: #2ecc71; /* Green theme color */
+    margin-bottom: 20px;
+}
+
+.signup-form p,
+.login-form p,
+.admin-dashboard p {
+    margin-bottom: 20px;
+}
+
+.signup-form label,
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.signup-form input,
+.signup-form textarea,
+.signup-form select,
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.signup-form textarea {
+    resize: vertical;
+}
+
+.signup-form .btn,
+.login-form .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #2ecc71; /* Green theme color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-form .btn:hover,
+.login-form .btn:hover {
+    background-color: #27ae60; /* Slightly darker green on hover */
+}
+
+.signup-form .error,
+.login-form .error {
+    color: red;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Admin Dashboard Specific Styles */
+.admin-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.admin-actions a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.admin-actions a:hover {
+    background-color: #27ae60;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .topnav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .topnav-right {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    .category-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .signup-form,
+    .login-form,
+    .admin-dashboard {
+        max-width: 100%;
+        padding: 15px;
+    }
+}
